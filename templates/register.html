@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{% if message %}
+<div>
+{{message}}
+</div>
+{% endif %}
+<form method = "POST" action = "/">
+    <div>
+        Fullname:
+    </div>
+    <div>
+        <input type = "text" name = "Full_name">
+    </div>
+    <br>
+    <div>
+        Age:
+    </div>
+    <div>
+        <input type = "number" name = "age" min = 18>
+    </div>
+    <br>
+    <div>
+        Gender:
+    </div>
+    <div>
+        <select name = "gender">
+            <option value = "F"> Female </option>
+            <option value = "M"> Male </option>
+    </div>
+    <br>
+    <div>
+        Address:
+    </div>
+    <div>
+        <input type = "text" name = "Address">
+    </div>
+    <br>
+    <div>
+        Phone Number:
+    </div>
+    <div>
+        <input type = "text" name = "Phone_number">
+    </div>
+    <br>
+    <div>
+        Email:
+    </div>
+    <div>
+        <input type = "text" name = "Email">
+    </div>
+    <br>
+    <input type = "submit" name = "register" value = "Register">
+</form>
+</body>
+</html>

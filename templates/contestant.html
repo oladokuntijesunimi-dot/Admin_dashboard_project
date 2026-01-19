@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+    <title></title>
+    </head>
+    <body>
+    {% if message %}
+    <div>
+        {{ message }}
+    </div>
+    {% endif %}
+    <form method="POST" action="/contestant">
+    <div>
+        Fullname:
+    </div>
+    <div>
+        <input type="text" name="fullname">
+    </div>
+    <br>
+
+    <div>
+        Age:
+    </div>
+    <div>
+        <input type="number" name="age" min="18">
+    </div>
+    <br>
+
+    <div>
+    Gender:
+    </div>
+
+    <div>
+    <select name="gender">
+        <option value="F"> Female </option>
+        <option value="M"> Male </option>
+    </select> 
+    </div>
+    <br>
+    
+    <div>
+        Address:
+    </div>
+    <div>
+        <input type="text" name="address">
+    </div>
+    <br>
+
+    <div>
+        Email:
+    </div>
+    <div>
+        <input type="text" name="email">
+    </div>
+    <br>
+
+    <div>
+        Phone Number:
+    </div>
+    <div>
+        <input type="text" name="phone_number">
+    </div>
+    <br>
+
+    <div>
+        Party
+    </div>
+    <div>
+        <select name="party">
+            {% for party in parties %}
+            <option value="{{party[0]}}">{{party[1]}}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+     <div>
+        Post
+    </div>
+    <div>
+        <select name="post">
+            {% for post in posts %}
+            <option value="{{post[0]}}">{{post[1]}}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <input type="submit" name="register" value="Register">
+    </form>
+    </body>
+</html>
